@@ -1,0 +1,28 @@
+Difference between SOAP and REST Services	
+SOAP:SOAP is a protocol which was designed before REST and came into the picture. The main idea behind designing SOAP was to ensure that programs built on different platforms and programming languages could exchange data in an easy manner.
+REST:This was designed specifically for working with components such as media components, files, or even objects on a particular hardware device. Any web service that is defined on the principles of REST can be called a RestFul web service. A Restful service would use the normal HTTP verbs of GET, POST, PUT and DELETE for working with the required components.
+
+REST is an Architectural style in which a web service can only be treated as a RESTful service if it follows the constraints of being
+1.Client Server
+2.Stateless
+3.Cacheable
+4.Layered System
+5.Uniform Interface
+
+		SOAP						REST
+
+1)	SOAP is a protocol.					REST is an architectural style.
+2)	SOAP stands for Simple Object Access Protocol.		REST stands for REpresentational State Transfer.
+3)	SOAP can't use REST because it is a protocol.			REST can use SOAP web services because it is a concept and can use any 								protocol like HTTP, SOAP.
+4)	SOAP uses services interfaces to expose the business logic.	REST uses URI to expose business logic.
+5)	JAX-WS is the java API for SOAP web services.		JAX-RS is the java API for RESTful web services.
+6)	SOAP defines standards to be strictly followed.		REST does not define too much standards like SOAP.
+7)	SOAP requires more bandwidth and resource than REST.		REST requires less bandwidth and resource than SOAP.
+8)	SOAP defines its own security.				RESTful web services inherits security measures from the underlying transport.
+9)	SOAP permits XML data format only.			REST permits different data format such as Plain text, HTML, XML, JSON etc.
+10)	SOAP is less preferred than REST.				REST more preferred than SOAP.
+
+
+
+Why REST better than SOAP?
+REST also makes efficient use of bandwidth, as it's much less verbose than SOAP. Unlike SOAP, REST is designed to be stateless, and REST reads can be cached for better performance and scalability. REST supports many data formats, but the predominant use of JSON means better support for browser clients.

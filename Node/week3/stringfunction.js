@@ -1,0 +1,10 @@
+var i = "this is a test".indexOf("is");
+var s = "this is a test string.".substr(19, 3);
+var s1 = "this is a test string.".slice(17, 20);
+var s2 = "a|b|c|d|e|f|g|h".split("|");
+var s3 = '       cat   \n\n\n    '. trim();
+console.log(i);
+console.log(s);
+console.log(s1);
+console.log(s2);
+console.log(s3);

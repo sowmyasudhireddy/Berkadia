@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1>Sticky Notes</h1>
+        <form name="radio" align='center' action="/" method="post">
+            <div class="row">
+                <input type="text" class="form-control" name="notesName" placeholder="Enter Notes name"><br><br>
+            </div>
+            <div class="row">
+                <textarea name="content" id="content" cols="30" rows="10" class="form-control" placeholder="Enter notes"></textarea>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-sm-3">
+                    <input type="radio" name="Operation" value="create" class="form-control">Create Notes<br>
+                </div>
+                <div class="col-sm-3">
+                    <input type="radio" name="Operation" value="read" class="form-control"> Read notes<br>
+                </div>
+                <div class="col-sm-3">
+                    <input type="radio" name="Operation" value="update" class="form-control"> Update notes<br>
+                </div>
+                <div class="col-sm-3">
+                    <input type="radio" name="Operation" value="delete" class="form-control"> Delete notes<br>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <input type="submit" value="SUBMIT" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

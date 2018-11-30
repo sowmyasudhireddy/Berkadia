@@ -1,0 +1,85 @@
+DIFFERENCES BETWEEN FOR,FOREACH,FORIN:
+
+1.FOR:
+->It’s the most basic of loops in JavaScript and is quite versatile. Here’s the basic for loop syntax:
+
+for (i = 0; i < 10; i++) { 
+  // do something
+}
+->In this example, we are setting i = 0 before our loop starts. We will continue to loop as long as i < 10, and each iteration of the loop will increase i by one. 
+Finally, within our brackets is the code that will be run on each iteration of the loop.
+
+example:
+const arr = ['cat', 'dog', 'fish'];
+for (i = 0; i < arr.length; i++) { 
+  console.log(arr[i])
+}
+// cat
+// dog
+// fish
+
+2.FOREACH:
+->forEach is an Array method that we can use to execute a function on each element in an array. It can only be used on Arrays, Maps, and Sets.
+
+A simple example would be to console.log each element of an array. 
+->When using forEach, we simply have to specify a callback function. This callback will be executed on each element in the array.
+
+example:
+const arr = ['cat', 'dog', 'fish'];
+arr.forEach(element => {
+  console.log(element);
+});
+// cat
+// dog
+// fish
+
+3.FORIN:
+->for...in is used to iterate over the enumerable properties of objects. 
+->Every property in an object will have an Enumerable value ,?if that value is set to true, then the property is Enumerable.
+
+for (variable in object) {  
+  // do something
+}
+
+example:
+const arr = ['cat', 'dog', 'fish'];
+for (let i in arr) {  
+  console.log(arr[i])
+}
+// cat
+// dog
+// fish
+
+example:
+const string = 'hello';
+for (let character in string) {  
+    console.log(string[character])
+}
+// h
+// e
+// l
+// l
+// o
+
+4.FOROF:
+
+->The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, Array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables.
+ It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
+example
+function* foo(){
+
+  yield 1;
+  yield 2;
+
+}
+
+
+for (let o of foo()) {
+ 
+ console.log(o);
+  // expected output: 1
+
+
+  break; // closes iterator, triggers return
+}
+

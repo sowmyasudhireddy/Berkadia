@@ -1,0 +1,147 @@
+ES6 ARRAY FUNCTIONS:
+
+Array Methods:
+1.concat():
+ Returns a new array comprised of this array joined with other array(s) and/or value(s)
+
+2.every():
+Returns true if every element in this array satisfies the provided testing function.
+
+3.filter()
+Creates a new array with all of the elements of this array for which the provided filtering function returns true.
+
+4.forEach()
+Calls a function for each element in the array.
+
+5.indexOf()
+Returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found.
+
+6.join()
+Joins all elements of an array into a string.
+
+7.lastIndexOf()
+Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.
+
+8map()
+Creates a new array with the results of calling a provided function on every element in this array.
+
+9.pop()
+Removes the last element from an array and returns that element.
+
+10.push()
+Adds one or more elements to the end of an array and returns the new length of the array.
+
+11.reduce()
+Applies a function simultaneously against two values of the array (from left-to-right) as to reduce it to a single value.
+
+12.reduceRight()
+Applies a function simultaneously against two values of the array (from right-to-left) as to reduce it to a single value.
+
+13.reverse()
+Reverses the order of the elements of an array -- the first becomes the last, and the last becomes the first.
+
+14.shift()
+Removes the first element from an array and returns that element slice.
+
+15slice()
+Extracts a section of an array and returns a new array.
+
+16.some()
+Returns true if at least one element in this array satisfies the provided testing function.
+
+17.toSource()
+
+Represents the source code of an object.
+
+18.sort()
+Sorts the elements of an array.
+
+19.splice()
+Adds and/or removes elements from an array.
+
+20.toString()
+Returns a string representing the array and its elements.
+
+21.unshift()
+Adds one or more elements to the front of an array and returns the new length of the array
+
+ES6-ARRAY METHODS:
+
+->Following are some new array methods introduced in ES6.
+
+1.Array.prototype.find:
+->find lets you iterate through an array and get the first element back that causes the given callback function to return true. Once an element has been found, the function immediately returns. 
+example:
+var numbers = [1, 2, 3]; 
+var oddNumber = numbers.find((x) => x % 2 == 1); 
+console.log(oddNumber); // 1
+
+->The ES5 filter() and the ES6 find() are not synonymous. Filter always returns an array of matches (and will return multiple matches), find always returns the actual element.
+
+2.Array.prototype.findIndex
+->findIndex behaves similar to find, but instead of returning the element that matched, it returns the index of that element.
+
+example:
+var numbers = [1, 2, 3]; 
+var oddNumber = numbers.findIndex((x) => x % 2 == 1); 
+console.log(oddNumber); // 0 
+
+3.Array.prototype.entries
+->entries is a function that returns an Array Iterator that can be used to loop through the array’s keys and values. Entries will return an array of arrays, where each child array is an array of [index, value].
+
+example:
+var numbers = [1, 2, 3]; 
+var val = numbers.entries(); 
+console.log(val.next().value);  
+console.log(val.next().value);  
+console.log(val.next().value);
+
+output:
+[0,1] 
+[1.2] 
+[2,3]
+
+4.Array.from
+->Array.from() enables the creation of a new array from an array like object. The basic functionality of Array.from() is to convert two kinds of values to Arrays -
+
+*Array-like values.
+
+*Iterable values like Set and Map.
+
+example:
+"use strict" 
+for (let i of Array.from('hello')) { 
+   console.log(i) 
+}
+output :
+
+h                               
+e                               
+l                               
+l                               
+o
+
+5.Array.prototype.keys():
+->This function returns the array indexes.
+Example
+console.log(Array.from(['a', 'b'].keys()))
+output:
+[ 0, 1 ] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
