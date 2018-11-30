@@ -1,0 +1,39 @@
+<div class="container" id="container">
+  <h1>Grocery Items</h1><br>
+  <div class="row" *ngFor="let item of grocery_items">
+    <ul class="list-group">
+      <div class="col-sm-4">
+        <li class="list-group-item">{{item.name}}</li>
+      </div>
+      <div class="col-sm-4">
+        <li class="list-group-item">{{item.price}}</li>
+      </div>
+    </ul>
+    <div class="col-sm-4">
+      <button class="btn btn-warning" (click)="addToCart(item)">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="cart.length>0">
+  <h1>Cart</h1>
+  <div class="row" *ngFor="let item of cart">
+    <ul class="list-group">
+      <div class="col-sm-4">
+        <li class="list-group-item">{{item.name}}</li>
+      </div>
+      <div class="col-sm-4">
+        <li class="list-group-item">{{item.price}}</li>
+      </div>
+    </ul>
+    <div class="col-sm-4">
+      <button class="btn btn-warning" (click)="removeItem(item)">Remove</button>
+    </div>
+  </div>
+  <div class="row">
+      <h1>Amount to pay : ${{total}}</h1><br>
+    <div class="col-sm-6">
+      <button (click)="checkout()" class="btn btn-success">Proceed to checkout</button>
+    </div>
+  </div>
+</div>
