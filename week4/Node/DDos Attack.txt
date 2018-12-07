@@ -1,0 +1,23 @@
+DDOS ATTACK:
+->DDoS is distributed denial-of-service  attack
+->DDos attack is a malicious attempt to disrupt normal traffic of a targeted server, service or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic.
+->DDos attack is like Trafficjam.
+
+HOW it works?
+1.A DDoS attack requires an attacker to gain control of a network of online machines in order to carry out an attack.
+ Computers and other machines are infected with malware, turning each one into a bot . The attacker then has remote control over the group of bots, which is called a botnet.
+2. Once a botnet has been established, the attacker is able to direct the machines by sending updated instructions to each bot via a method of remote control.
+->When the IP address of a victim is targeted by the botnet, each bot will respond by sending requests to the target, potentially causing the targeted server or network to overflow capacity,
+ resulting in a denial-of-service to normal traffic.
+
+TYPES:
+1.Application Layer Attack
+2.Protocols Attack
+3.Volumetric Attacks
+
+Process of mitigating DDos Attacks:
+
+1.Black Hole Routing
+2.Rate Limiting
+3.web application firewall
+4.Anycast Network Diffusion
