@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <input type="text" [(ngModel)]="username" class="form-control">
+  </div>
+  <div class="row">
+    <h3 *ngIf="typing">{{typingUser}} is typing..</h3>
+  </div>
+  <h1>Chat: </h1>
+  <div class="row" *ngFor="let message of messages">
+    <div class="col-sm-6">
+      <h2>{{message.msg}}</h2>
+    </div>
+    <div class="col-sm-6">
+      <p>- {{message.username}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <input #textInput type="text" [(ngModel)]="message" class="form-control" (keyup)="sendTypingEvent(true)">
+    <br><br>
+    <button (click)="sendMessage()" class="btn btn-primary">Send</button>
+
+  </div>
+
+</div>
