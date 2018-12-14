@@ -1,0 +1,55 @@
+<h1 align="center">PROJECT DETAILS</h1>
+<h2>Select an option below :</h2>
+<div align="center">
+  <table>
+    <tr *ngFor="let option of options">
+      <td [ngStyle]="{'text-align':'left'}">{{option.name}}</td>
+      <td [ngStyle]="{'text-align':'left'}">
+        <button type="button" class="btn btn btn-outline-danger" (click)="displayData(option.name)">
+          {{option.value}}</button></td>
+    </tr>
+  </table>
+</div>
+<div [ngSwitch]="value">
+  <div *ngSwitchCase="'projectdetails'" align="center">
+    <h1>projectdetails</h1>
+  </div>
+  <div *ngSwitchCase="'studentsdetails'" align="center">
+    <h1>studentsdetails</h1>
+  </div>
+  <div *ngSwitchCasedefault></div>
+</div>
+
+<br /><br />
+
+<div *ngIf="displayProject">
+  <table id="projectdetails" align="center">
+    <th>S.NO</th>
+    <th>TASK</th>
+    <th>PRIORITY</th>
+    <th>TECHNOLOGY</th>
+
+    <tr *ngFor="let list of displayList;let sno=index;let even=even;let odd=odd;let first=first;let last=last"
+      [ngClass]="{firstrow:first,lastrow:last,evenrow:even,oddrow:odd}">
+      <td>{{sno+1}}</td>
+      <td>{{list.task}}</td>
+      <td>{{list.priority}}</td>
+      <td>{{list.technology}}</td>
+    </tr>
+  </table>
+</div>
+<div align="center" *ngIf="displaystudent">
+  <table>
+    <tr>
+      <th>S.No</th>
+      <th>Name</th>
+      <th>Section</th>
+    </tr>
+    <tr *ngFor="let student of studentList;let i=index;let even=even;let odd=odd;let first=first;let last=last"
+      [ngClass]="{firstrow:first,lastrow:last,evenrow:even,oddrow:odd}">
+      <td>{{i+1}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.sec}}</td>
+    </tr>
+  </table>
+</div>
