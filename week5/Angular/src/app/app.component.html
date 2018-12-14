@@ -15,7 +15,7 @@
     <h1>projectdetails</h1>
   </div>
   <div *ngSwitchCase="'studentsdetails'" align="center">
-    <h1>studentsdetails</h1>
+    <h1>studentdetails</h1>
   </div>
   <div *ngSwitchCasedefault></div>
 </div>
@@ -29,7 +29,7 @@
     <th>PRIORITY</th>
     <th>TECHNOLOGY</th>
 
-    <tr *ngFor="let list of displayList;let sno=index;let even=even;let odd=odd;let first=first;let last=last"
+    <tr *ngFor="let list of projectList;let sno=index;let even=even;let odd=odd;let first=first;let last=last"
       [ngClass]="{firstrow:first,lastrow:last,evenrow:even,oddrow:odd}">
       <td>{{sno+1}}</td>
       <td>{{list.task}}</td>
@@ -38,18 +38,17 @@
     </tr>
   </table>
 </div>
-<div align="center" *ngIf="displaystudent">
-  <table>
-    <tr>
-      <th>S.No</th>
-      <th>Name</th>
-      <th>Section</th>
-    </tr>
-    <tr *ngFor="let student of studentList;let i=index;let even=even;let odd=odd;let first=first;let last=last"
-      [ngClass]="{firstrow:first,lastrow:last,evenrow:even,oddrow:odd}">
-      <td>{{i+1}}</td>
-      <td>{{student.name}}</td>
-      <td>{{student.sec}}</td>
-    </tr>
-  </table>
-</div>
+<div *ngIf="displaystudent">
+    <table id="studentdetails" align="center">
+      <th>S.NO</th>
+      <th>NAME</th>
+      <th>SECTION</th>
+  
+      <tr *ngFor="let stu of studentData;let sno=index;let even=even;let odd=odd;let first=first;let last=last"
+        [ngClass]="{firstrow:first,lastrow:last,evenrow:even,oddrow:odd}">
+        <td>{{sno+1}}</td>
+        <td>{{stu.name}}</td>
+        <td>{{stu.sec}}</td>
+      </tr>
+    </table>
+  </div>

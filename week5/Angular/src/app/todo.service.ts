@@ -6,7 +6,7 @@ export class TodoService {
 
     constructor() {
     }
-    getOptionsData()
+    getOptionsData():any
     {
     return [
       {
@@ -19,7 +19,7 @@ export class TodoService {
       }
     ];
 }
-    getTodoList(): any {
+getProjectData(): any {
         return [
             {
                 task: "project1",
@@ -60,8 +60,7 @@ export class TodoService {
 
     }
     
-getStudentsData()
-{
+getStudentsData():any{
     return[
         {
             name:"sowmya",

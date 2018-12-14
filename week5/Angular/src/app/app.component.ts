@@ -8,24 +8,27 @@ import { TodoService } from './todo.service';
 })
 export class AppComponent {
   title = 'PROJECT DETAILS';
-  public displayList: [];
-  public studentlist: [];
+  public projectList= [];
   public options = [];
-  public displayProject: boolean;
-  public displaystudent: boolean;
+  public studentData= [];
+  public displayProject: boolean=false;
+  public displaystudent: boolean=false;
   public value: string = "default";
-  constructor(todoservice: TodoService) {
-    this.options = todoservice.getOptionsData();
-    this.displayList = todoservice.getTodoList();
-    //this.studentlist = todoservice.getStudentsData();
-
+  constructor(private todoservice: TodoService)
+   {
+    this.options = this.todoservice.getOptionsData();
+    this.projectList = this.todoservice.getProjectData();
+    this.studentData = this.todoservice.getStudentsData();
   }
   displayData(option) {
+   console.log(option);
     this.value = option;
     if (option == "projectdetails") {
       this.displayProject = true;
+      this.displaystudent = false;
     }
-    if (option == "studentdetails") {
+    if (option == "studentsdetails") {
+      this.displayProject = false;
       this.displaystudent = true;
     }
 
