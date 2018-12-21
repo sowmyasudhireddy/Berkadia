@@ -1,0 +1,37 @@
+DOCKER COMMANDS:
+->docker-machine rm default - remove default machine
+->docker-machine create --driver virtualbox default - create a new virtual machine
+
+->docker --version
+
+->docker info  - complete information about docker
+
+->docker run hello-world
+
+->docker image ls
+
+->docker login
+
+->docker container ls  - lists all the containers running
+->docker container ls  --all - lists all container both running and stopped
+->docker ps -a
+->docker ps
+
+->docker container top
+
+->docker container --help - help command for docker
+
+->->shells in linux: bash , sh
+->docker run -it "node" --bash
+
+->docker pull node
+
+->docker-machine ip -> ip address information about docker
+
+->docker run -d -p 4000:80 node --> running docker in detached mode(background)
+
+->docker container stop 'container id'
+  
+->docker tag image username/repository:tag  ---> command used to tag image
+
+->docker push username/repository:tag  --> command to push your image to a repo
