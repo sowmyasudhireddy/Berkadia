@@ -1,0 +1,19 @@
+
+<div class="container" id="container">
+  <h1 align=center>Library Books</h1>
+  <div class="row" *ngFor="let books of books_data" (click)="selectedBook()">
+    <ul class=list-group>
+      <div class="col-sm-4">
+        <li class="list-group-item">{{books.Title}}</li>
+      </div>
+      <div class="col-sm-4">
+        <li class="list-group-item">{{books.Author}}</li>
+      </div>
+    </ul>
+    <div class="col-sm-4">
+      <button class="btn btn-warning" (click)="addToPassbook(books)">AddToPassbook</button>
+    </div>
+  </div>
+</div>
+
+<app-passbook [selectedItem]="books"  (changeEmitter)=navigateToCheckout($event)></app-passbook>

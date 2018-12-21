@@ -1,0 +1,19 @@
+
+  <h1>PassBook</h1>
+  <div class="row" *ngFor="let books of pass">
+    <ul class="list-group">
+      <div class="col-sm-4">
+        <li class="list-group-item">{{books.Title}}</li>
+      </div>
+      <div class="col-sm-4">
+        <li class="list-group-item">{{books.Author}}</li>
+      </div>
+    </ul>
+    <div class="col-sm-4">
+      <button class="btn btn-warning" (click)="removeBook(books)">Remove</button>
+    </div>
+  </div>
+    <div class="col-sm-6">
+      <button (click)="checkout()" class="btn btn-success">Proceed to checkout</button>
+    </div>
+

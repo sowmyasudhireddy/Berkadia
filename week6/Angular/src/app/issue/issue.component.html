@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Issue</h1>
+  <table class="table table-hover">
+    <tbody>
+      <tr>
+        <td>RollNo</td>
+        <td><input type="text" name="RollNo" [(ngModel)]="RollNo"></td>
+      </tr>
+      <tr>
+        <td>Name of the student</td>
+        <td><input type="text" name="name" [(ngModel)]="name"></td>
+      </tr>
+      <tr>
+        <td>Bookid</td>
+        <td><input type="text" name="bookid" [(ngModel)]="bookid"></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" (click)="issueNow()">Isuue Now</button>
+  <br>
+</div>
+
