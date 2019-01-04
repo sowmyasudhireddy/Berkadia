@@ -1,1 +1,18 @@
 
+Sowmya Sudhireddy@Sowmya-Sudhireddy-23 MINGW64 ~/desktop/week7assig/node
+$ docker build -t ruby .
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM ruby:2.5
+ ---> 6fc6e4e7a8ee
+Step 2/3 : COPY . .
+ ---> e5e7ecb25a1e
+Step 3/3 : CMD ["ruby","./index.rb"]
+ ---> Running in 8dda2fd7d4a6
+Removing intermediate container 8dda2fd7d4a6
+ ---> 0702b76372d4
+Successfully built 0702b76372d4
+Successfully tagged ruby:latest
+
+Sowmya Sudhireddy@Sowmya-Sudhireddy-23 MINGW64 ~/desktop/week7assig/node
+$ docker run ruby
+I am Berkadian
